@@ -34,7 +34,7 @@ h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;display:block;}
 ::selection{background:var(--lime);color:var(--ink);}
- 
+
 /* ---------- CURSOR GLOW ---------- */
 .cursor-glow{
   position:fixed;width:420px;height:420px;border-radius:50%;
@@ -42,13 +42,13 @@ img{max-width:100%;display:block;}
   pointer-events:none;z-index:0;transition:transform .15s ease-out;
   transform:translate(-50%,-50%);
 }
- 
+
 .progress-bar{
   position:fixed;top:0;left:0;height:3px;width:0%;
   background:linear-gradient(90deg, var(--violet), var(--lime));
   z-index:200;transition:width .05s linear;
 }
- 
+
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -74,7 +74,7 @@ img{max-width:100%;display:block;}
 }
 .nav-cta:hover{background:var(--violet);transform:translateY(-2px);}
 .burger{display:none;}
- 
+
 /* ---------- HERO ---------- */
 .hero{
   min-height:100vh;display:flex;flex-direction:column;justify-content:center;
@@ -142,25 +142,25 @@ img{max-width:100%;display:block;}
   border-bottom:2px solid var(--ink); transition:opacity .25s;
 }
 .btn-ghost:hover{opacity:.6;}
- 
+
 .hero-stats{
   display:flex;gap:52px;margin-top:76px;flex-wrap:wrap;
   padding-top:40px;border-top:1px solid var(--line);
 }
 .stat-num{font-family:'Space Grotesk',sans-serif;font-size:2.1rem;font-weight:700;color:var(--ink);}
 .stat-label{font-size:0.85rem;color:var(--muted);margin-top:2px;}
- 
+
 /* ---------- SECTION WRAP ---------- */
 section{padding:120px 6%;position:relative;z-index:1;}
 .section-head{max-width:640px;margin-bottom:64px;}
 .section-tag{font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--violet-deep);margin-bottom:14px;display:block;}
 .section-head h2{font-size:clamp(2rem,3.6vw,3rem);font-weight:700;line-height:1.08;}
 .section-head p{margin-top:18px;color:var(--muted);font-size:1.05rem;line-height:1.6;}
- 
+
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.9,.3,1), transform .8s cubic-bezier(.2,.9,.3,1);}
 .reveal.in{opacity:1;transform:translateY(0);}
- 
+
 /* ---------- WHY / SERVICES ---------- */
 .why{
   background:var(--ink);color:var(--paper);border-radius:32px;margin:0 6%;padding:100px 5%;width:88%;
@@ -180,7 +180,7 @@ section{padding:120px 6%;position:relative;z-index:1;}
 .why-num{font-family:'Space Grotesk',sans-serif;color:var(--lime);font-weight:700;font-size:0.95rem;margin-bottom:22px;display:block;}
 .why-card h3{font-size:1.25rem;font-weight:600;margin-bottom:10px;}
 .why-card p{color:rgba(250,250,247,0.58);font-size:0.95rem;line-height:1.6;}
- 
+
 /* ---------- PORTFOLIO ---------- */
 .work-list{display:flex;flex-direction:column;gap:26px;}
 @media (min-width:1000px){
@@ -237,13 +237,13 @@ section{padding:120px 6%;position:relative;z-index:1;}
   transition:gap .25s ease, color .25s ease;
 }
 .work-link:hover{gap:14px;color:var(--violet-deep);}
- 
+
 @media (max-width:900px){
   .work-card{grid-template-columns:1fr;}
   .work-media{min-height:220px;}
   .why-grid{grid-template-columns:1fr;}
 }
- 
+
 /* ---------- PROCESS ---------- */
 .process{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);}
 .process-step{padding:36px 24px 36px 0;border-right:1px solid var(--line);position:relative;}
@@ -256,7 +256,7 @@ section{padding:120px 6%;position:relative;z-index:1;}
 .process-step h4{font-size:1.15rem;font-weight:600;margin-bottom:10px;}
 .process-step p{color:var(--muted);font-size:0.9rem;line-height:1.55;}
 @media (max-width:900px){.process{grid-template-columns:1fr;}.process-step{border-right:none;border-bottom:1px solid var(--line);}}
- 
+
 /* ---------- TESTIMONIAL / RESULTS STRIP ---------- */
 .strip{
   display:flex;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -267,7 +267,7 @@ section{padding:120px 6%;position:relative;z-index:1;}
 .strip-track span b{color:var(--ink);}
 .strip-track .sep{color:var(--lime);}
 @keyframes scroll-x{from{transform:translateX(0);}to{transform:translateX(-50%);}}
- 
+
 /* ---------- CONTACT ---------- */
 .contact{
   background:var(--ink);color:var(--paper);border-radius:32px;margin:0 6% 6%;
@@ -298,11 +298,38 @@ section{padding:120px 6%;position:relative;z-index:1;}
   font-weight:600;color:var(--paper);transition:border-color .3s, background .3s;
 }
 .btn-outline:hover{border-color:rgba(250,250,247,0.6);background:rgba(250,250,247,0.06);}
- 
+
+/* ---------- PAYMENT METHODS ---------- */
+.payments{padding:70px 6% 20px;}
+.payments-head{text-align:center;margin-bottom:36px;}
+.payments-head span{
+  font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;
+  color:var(--violet-deep);display:block;margin-bottom:10px;
+}
+.payments-head h3{font-size:1.5rem;font-weight:700;}
+.payments-grid{
+  display:flex;justify-content:center;gap:22px;flex-wrap:wrap;max-width:720px;margin:0 auto;
+}
+.payment-card{
+  display:flex;align-items:center;gap:16px;
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:20px 26px;min-width:260px;flex:1;
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.payment-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(14,15,20,0.08);border-color:rgba(91,76,255,0.25);}
+.payment-icon{
+  width:52px;height:52px;border-radius:12px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+}
+.payment-icon.mp{background:#009EE3;}
+.payment-icon.g66{background:#0B2545;}
+.payment-info h4{font-size:1.05rem;font-weight:700;}
+.payment-info p{font-size:0.85rem;color:var(--muted);margin-top:2px;}
+
 /* ---------- FOOTER ---------- */
 footer{padding:50px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:0.85rem;}
 footer .logo{font-size:1rem;}
- 
+
 @media (max-width:640px){
   .nav-links{display:none;}
   .hero{padding-top:120px;}
@@ -313,10 +340,10 @@ footer .logo{font-size:1rem;}
 </style>
 </head>
 <body>
- 
+
 <div class="progress-bar" id="progressBar"></div>
 <div class="cursor-glow" id="glow"></div>
- 
+
 <nav class="nav" id="nav">
   <div class="logo"><span class="logo-dot"></span>Robert&nbsp;G.</div>
   <div class="nav-links">
@@ -327,7 +354,7 @@ footer .logo{font-size:1rem;}
   </div>
   <a class="nav-cta" href="#contacto">Empezar proyecto →</a>
 </nav>
- 
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
@@ -357,7 +384,7 @@ footer .logo{font-size:1rem;}
     <div><div class="stat-num" data-target="24">0</div><div class="stat-label">Horas típicas de<br>primera entrega</div></div>
   </div>
 </section>
- 
+
 <!-- WHY -->
 <section id="porque">
   <div class="why reveal">
@@ -389,7 +416,7 @@ footer .logo{font-size:1rem;}
     </div>
   </div>
 </section>
- 
+
 <!-- PORTFOLIO -->
 <section id="trabajos">
   <div class="section-head reveal">
@@ -397,9 +424,9 @@ footer .logo{font-size:1rem;}
     <h2>Tres rubros, tres formas distintas de vender online.</h2>
     <p>Cada proyecto abajo es un sitio real, en producción, con un objetivo de negocio específico detrás.</p>
   </div>
- 
+
   <div class="work-list">
- 
+
     <!-- PROJECT 1 -->
     <article class="work-card reveal">
       <div class="work-media parallax-card" style="background:#101018;">
@@ -438,7 +465,7 @@ footer .logo{font-size:1rem;}
         </a>
       </div>
     </article>
- 
+
     <!-- PROJECT 2 -->
     <article class="work-card reveal">
       <div class="work-media parallax-card" style="background:#2A1810;">
@@ -474,7 +501,7 @@ footer .logo{font-size:1rem;}
         </a>
       </div>
     </article>
- 
+
     <!-- PROJECT 3 -->
     <article class="work-card reveal">
       <div class="work-media parallax-card" style="background:#101820;">
@@ -509,10 +536,10 @@ footer .logo{font-size:1rem;}
         </a>
       </div>
     </article>
- 
+
   </div>
 </section>
- 
+
 <!-- STRIP -->
 <div class="strip">
   <div class="strip-track">
@@ -530,7 +557,7 @@ footer .logo{font-size:1rem;}
     <span>Conversión real <span class="sep">✦</span></span>
   </div>
 </div>
- 
+
 <!-- PROCESS -->
 <section id="proceso">
   <div class="section-head reveal">
@@ -560,7 +587,7 @@ footer .logo{font-size:1rem;}
     </div>
   </div>
 </section>
- 
+
 <!-- CONTACT -->
 <section id="contacto">
   <div class="contact reveal">
@@ -570,7 +597,7 @@ footer .logo{font-size:1rem;}
     <h2>¿Tu negocio ya tiene la idea grande?<br>Falta el sitio que la muestre.</h2>
     <p>Contame de qué se trata tu negocio y en 24hs te muestro cómo lo llevaría a la web.</p>
     <div class="contact-actions">
-      <a class="btn-lime" href="https://wa.me/5493543000000" target="_blank" rel="noopener">
+      <a class="btn-lime" href="https://wa.me/543489686939" target="_blank" rel="noopener">
         Escribime por WhatsApp
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg>
       </a>
@@ -578,12 +605,45 @@ footer .logo{font-size:1rem;}
     </div>
   </div>
 </section>
- 
+
+<section class="payments reveal">
+  <div class="payments-head">
+    <span>Métodos de pago</span>
+    <h3>Pagá tu proyecto como te resulte más cómodo</h3>
+  </div>
+  <div class="payments-grid">
+    <div class="payment-card">
+      <div class="payment-icon mp" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path d="M4 12c2-4 5-6 8-6s6 2 8 6c-2 4-5 6-8 6s-6-2-8-6z" stroke="#fff" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="2.6" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="payment-info">
+        <h4>Mercado Pago</h4>
+        <p>Transferencia, QR o tarjeta — Argentina</p>
+      </div>
+    </div>
+    <div class="payment-card">
+      <div class="payment-icon g66" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M3 12h18M12 3c2.5 2.5 4 5.6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.6-4-9s1.5-6.5 4-9z"/>
+        </svg>
+      </div>
+      <div class="payment-info">
+        <h4>Global66</h4>
+        <p>Transferencia internacional</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="logo"><span class="logo-dot"></span>Robert&nbsp;G. — Diseño Web</div>
   <div>© 2026 · Sitios para negocios reales</div>
 </footer>
- 
+
 <script>
 // cursor glow
 const glow = document.getElementById('glow');
@@ -591,13 +651,13 @@ window.addEventListener('mousemove', e=>{
   glow.style.left = e.clientX+'px';
   glow.style.top = e.clientY+'px';
 });
- 
+
 // nav scroll state
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', ()=>{
   nav.classList.toggle('scrolled', window.scrollY > 20);
 });
- 
+
 // reveal on scroll
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries)=>{
@@ -609,7 +669,7 @@ const io = new IntersectionObserver((entries)=>{
   });
 },{threshold:0.15});
 revealEls.forEach(el=>io.observe(el));
- 
+
 // stat counters
 const stats = document.querySelectorAll('.stat-num');
 const statIO = new IntersectionObserver((entries)=>{
@@ -630,7 +690,7 @@ const statIO = new IntersectionObserver((entries)=>{
   });
 },{threshold:0.4});
 stats.forEach(el=>statIO.observe(el));
- 
+
 // scroll progress bar
 const progressBar = document.getElementById('progressBar');
 function updateProgress(){
@@ -639,13 +699,13 @@ function updateProgress(){
   const height = h.scrollHeight - h.clientHeight;
   progressBar.style.width = (height>0 ? (scrolled/height)*100 : 0) + '%';
 }
- 
+
 // parallax on background images
 const parallaxImgs = document.querySelectorAll('.parallax-img');
 const parallaxCards = document.querySelectorAll('.parallax-card');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let isMobile = window.innerWidth < 768;
- 
+
 function updateParallax(){
   if(isMobile || reduceMotion) return;
   const vh = window.innerHeight;
@@ -664,7 +724,7 @@ function updateParallax(){
     img.style.setProperty('--parallax', val+'px');
   });
 }
- 
+
 function resetParallax(){
   parallaxImgs.forEach(img=>{ img.style.transform=''; });
   parallaxCards.forEach(card=>{
@@ -672,7 +732,7 @@ function resetParallax(){
     if(img) img.style.setProperty('--parallax','0px');
   });
 }
- 
+
 let ticking = false;
 function onScroll(){
   updateProgress();
@@ -690,13 +750,12 @@ window.addEventListener('resize', ()=>{
 });
 updateProgress();
 if(!isMobile && !reduceMotion) updateParallax();
- 
+
 if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
   glow.style.display='none';
 }
 </script>
- 
+
 </body>
 </html>
- 
